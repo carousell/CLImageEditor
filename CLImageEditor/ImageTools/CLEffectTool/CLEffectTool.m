@@ -35,7 +35,7 @@
 
 + (BOOL)isAvailable
 {
-    return ([UIDevice iosVersion] >= 5.0);
+    return NO;
 }
 
 #pragma mark- 

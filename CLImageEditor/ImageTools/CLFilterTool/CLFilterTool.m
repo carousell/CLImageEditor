@@ -81,6 +81,7 @@
         }
         
         CLToolbarMenuItem *view = [CLImageEditorTheme menuItemWithFrame:CGRectMake(x, 0, W, _menuScroll.height) target:self action:@selector(tappedFilterPanel:) toolInfo:info];
+        view.iconImageContentMode = UIViewContentModeScaleAspectFit;
         [_menuScroll addSubview:view];
         x += W;
         

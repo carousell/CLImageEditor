@@ -182,6 +182,7 @@ static NSString* const kCLRotateToolCropRotate = @"cropRotateEnabled";
         CLToolbarMenuItem *view = [CLImageEditorTheme menuItemWithFrame:CGRectMake(x, 0, W, H) target:self action:@selector(tappedMenu:) toolInfo:nil];
         view.tag = tag++;
         view.iconImage = obj[@"icon"];
+        view.iconImageContentMode = UIViewContentModeScaleAspectFit;
         view.title = obj[@"title"];
         
         [_menuScroll addSubview:view];

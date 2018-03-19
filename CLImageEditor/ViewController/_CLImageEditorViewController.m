@@ -548,6 +548,7 @@ static const CGFloat kMenuBarHeight = 80.0f;
         }
         
         CLToolbarMenuItem *view = [CLImageEditorTheme menuItemWithFrame:CGRectMake(x+padding, 0, W, H) target:self action:@selector(tappedMenuView:) toolInfo:info];
+        view.iconImageContentMode = UIViewContentModeScaleAspectFit;
         [_menuView addSubview:view];
         x += W+padding;
     }

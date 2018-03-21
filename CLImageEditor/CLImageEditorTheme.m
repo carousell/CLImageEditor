@@ -43,10 +43,10 @@ static CLImageEditorTheme *_sharedInstance = nil;
     self = [super init];
     if (self) {
         self.bundleName                     = @"CLImageEditor";
-        self.backgroundColor                = [UIColor whiteColor];
+        self.backgroundColor                = [UIColor colorWithRed:75/255 green:77/255 blue:82/255 alpha:1];
         self.toolbarColor                   = [UIColor colorWithWhite:1 alpha:0.8];
-		self.toolIconColor                  = @"black";
-        self.toolbarTextColor               = [UIColor blackColor];
+		self.toolIconColor                  = @"white";
+        self.toolbarTextColor               = [UIColor whiteColor];
         self.toolbarSelectedButtonColor     = [[UIColor cyanColor] colorWithAlphaComponent:0.2];
         self.toolbarTextFont                = [UIFont systemFontOfSize:10];
         self.statusBarHidden                = NO;

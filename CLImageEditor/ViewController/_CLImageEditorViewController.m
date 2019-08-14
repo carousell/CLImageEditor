@@ -107,9 +107,9 @@ static const CGFloat kMenuBarHeight = 80.0f;
         CGFloat dy = ([UIDevice iosVersion]<7) ? 0 : MIN([UIApplication sharedApplication].statusBarFrame.size.height, [UIApplication sharedApplication].statusBarFrame.size.width);
         
         UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, dy, self.view.width, kNavBarHeight)];
-        navigationBar.tintColor = [UIColor whiteColor];
+        navigationBar.tintColor = [CLImageEditorTheme toolbarTextColor];
         navigationBar.barTintColor = [CLImageEditorTheme toolbarColor];
-        navigationBar.barStyle = UIBarStyleBlack;
+        navigationBar.barStyle = UIBarStyleDefault;
         [navigationBar pushNavigationItem:navigationItem animated:NO];
         navigationBar.delegate = self;
         

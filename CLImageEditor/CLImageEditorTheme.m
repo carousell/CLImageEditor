@@ -51,7 +51,7 @@ static CLImageEditorTheme *_sharedInstance = nil;
         self.toolbarSelectedButtonColor     = [UIColor darkGrayColor];
         self.toolbarTextFont                = [UIFont systemFontOfSize:10];
         self.statusBarHidden                = NO;
-        self.statusBarStyle                 = UIStatusBarStyleLightContent;
+        self.statusBarStyle                 = UIStatusBarStyleDefault;
     }
     return self;
 }

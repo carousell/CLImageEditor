@@ -63,7 +63,7 @@ static NSString* const kCLToneCurveToolResetIconName = @"resetIconAssetsName";
 
 + (BOOL)isAvailable
 {
-    return ([UIDevice iosVersion] >= 5.0);
+    return NO;
 }
 
 #pragma mark- optional info

@@ -96,6 +96,7 @@ static const CGFloat kMenuBarHeight = 80.0f;
 - (void)initNavigationBar
 {
     self.navigationItem.rightBarButtonItem = [self createDoneButton];
+
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     
     if(_navigationBar==nil){
@@ -106,6 +107,9 @@ static const CGFloat kMenuBarHeight = 80.0f;
         CGFloat dy = ([UIDevice iosVersion]<7) ? 0 : MIN([UIApplication sharedApplication].statusBarFrame.size.height, [UIApplication sharedApplication].statusBarFrame.size.width);
         
         UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, dy, self.view.width, kNavBarHeight)];
+        navigationBar.tintColor = [CLImageEditorTheme toolbarTextColor];
+        navigationBar.barTintColor = [CLImageEditorTheme toolbarColor];
+        navigationBar.barStyle = UIBarStyleDefault;
         [navigationBar pushNavigationItem:navigationItem animated:NO];
         navigationBar.delegate = self;
         
@@ -548,6 +552,7 @@ static const CGFloat kMenuBarHeight = 80.0f;
         }
         
         CLToolbarMenuItem *view = [CLImageEditorTheme menuItemWithFrame:CGRectMake(x+padding, 0, W, H) target:self action:@selector(tappedMenuView:) toolInfo:info];
+        view.iconImageContentMode = UIViewContentModeScaleAspectFit;
         [_menuView addSubview:view];
         x += W+padding;
     }

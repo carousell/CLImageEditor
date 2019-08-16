@@ -64,7 +64,7 @@ static NSString* const kCLClippingToolRatioTitleFormat = @"titleFormat";
 
 + (BOOL)isAvailable
 {
-    return YES;
+    return NO;
 }
 
 #pragma mark- optional info

@@ -11,13 +11,13 @@ let package = Package(
         .library(
             name: "CLImageEditor",
             targets: [
-                "CLImageEditorCore"
+                "CLImageEditor"
                      ]
         )
     ],
     targets: [
         .target(
-            name: "CLImageEditorCore",
+            name: "CLImageEditor",
             path: "CLImageEditor",
 //            publicHeadersPath: ".",
             cSettings: [

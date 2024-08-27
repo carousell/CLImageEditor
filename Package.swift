@@ -12,14 +12,16 @@ let package = Package(
             name: "CLImageEditor",
             targets: [
                 "CLImageEditor"
-                     ]
+            ]
         )
     ],
     targets: [
         .target(
             name: "CLImageEditor",
             path: "CLImageEditor",
-//            publicHeadersPath: ".",
+            resources: [
+                .process("CLImageEditor.bundle")
+            ],
             cSettings: [
                 .headerSearchPath("CLImageEditor")
             ]

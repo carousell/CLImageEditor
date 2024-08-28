@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "CLImageEditor",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v12) // Adjusted to a minimum version that is more common for current SPM usage
     ],
@@ -20,7 +21,7 @@ let package = Package(
             name: "CLImageEditor",
             path: "CLImageEditor",
             resources: [
-                .process("CLImageEditor.bundle")
+                .copy("Resources")
             ],
             cSettings: [
                 .headerSearchPath("CLImageEditor")

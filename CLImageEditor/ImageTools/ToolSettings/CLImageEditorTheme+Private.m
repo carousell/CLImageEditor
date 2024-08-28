@@ -25,6 +25,12 @@
     if(path){
         return [NSBundle bundleWithPath:path];
     }
+
+    // For SPM support
+    path = [[NSBundle bundleForClass:self.class] pathForResource:@"CLImageEditor_CLImageEditor" ofType:@"bundle"];
+    if(path){
+        return [NSBundle bundleWithPath:path];
+    }
     return nil;
 }
 

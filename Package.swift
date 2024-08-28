@@ -21,7 +21,20 @@ let package = Package(
             name: "CLImageEditor",
             path: "CLImageEditor",
             resources: [
-                .copy("Resources")
+                .copy("Resources/CLAdjustmentTool"),
+                .copy("Resources/CLBlurTool"),
+                .copy("Resources/CLClippingTool"),
+                .copy("Resources/CLDrawTool"),
+                .copy("Resources/CLEffectTool"),
+                .copy("Resources/CLEmoticonTool"),
+                .copy("Resources/CLFilterTool"),
+                .copy("Resources/CLResizeTool"),
+                .copy("Resources/CLRotateTool"),
+                .copy("Resources/CLSplashTool"),
+                .copy("Resources/CLStickerTool"),
+                .copy("Resources/CLTextTool"),
+                .copy("Resources/CLToneCurveTool"),
+                .copy("Resources/Resources")
             ],
             cSettings: [
                 .headerSearchPath("CLImageEditor")

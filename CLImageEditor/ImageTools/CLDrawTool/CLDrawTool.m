@@ -123,9 +123,13 @@ static NSString* const kCLDrawToolEraserIconName = @"eraserIconAssetsName";
 {
     UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, width, 34)];
     
+    // The tracks are blanked so the gradient/wedge drawn into backgroundColor shows through.
+    // The thumb must NOT be blanked the same way: UISlider derives the thumb's touch target
+    // from its image, so an empty image collapses that target to 0x0 and the slider becomes
+    // impossible to drag (MT-2013). Leaving the thumb imageless also lets thumbTintColor
+    // apply, which colorSliderDidChange: relies on to preview the selected colour.
     [slider setMaximumTrackImage:[UIImage new] forState:UIControlStateNormal];
     [slider setMinimumTrackImage:[UIImage new] forState:UIControlStateNormal];
-    [slider setThumbImage:[UIImage new] forState:UIControlStateNormal];
     slider.thumbTintColor = [UIColor whiteColor];
     
     return slider;
